@@ -1,6 +1,6 @@
 class Skill {
   constructor() {
-    this.level = 1;
+    this.level = 0;
     this._duration;
     this._cooldown;
     this._multiplier;

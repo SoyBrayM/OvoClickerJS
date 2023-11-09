@@ -15,11 +15,7 @@ class Ovo {
     }
     if (this.tapsToReward <= 0) {
       this.tapsToReward = 10;
-
-      alert("You have gained an Ovo Point!");
       player.OvoPoints++;
-
-      Program.Update();
     }
   }
 

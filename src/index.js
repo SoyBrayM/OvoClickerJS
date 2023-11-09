@@ -12,16 +12,21 @@ const OvoButton = document.getElementById("OvoButton");
 const SkillButton = document.getElementById("SkillButton");
 const ShopTapPower = document.getElementById("ShopTapPower");
 const ShopSkill = document.getElementById("ShopSkill");
+const ShopReset = document.getElementById("ShopReset");
 
 class Program {
   static main() {
-    this.ovo = new Ovo(10000);
+    this.ovo = new Ovo(1000);
     this.player = new Player();
     this.skill = new Skill();
     this.shop = new Shop();
     setInterval(() => {
       this.Update();
     }, 16);
+
+    window.skill = this.skill;
+    window.player = this.player;
+    window.ovo = this.ovo;
 
     OvoButton.addEventListener("click", () => {
       this.ovo.Click(this.player);
@@ -35,6 +40,9 @@ class Program {
     ShopSkill.addEventListener("click", () => {
       this.shop.UpgradeSkill(this.player, this.skill);
     });
+    ShopReset.addEventListener("click", () => {
+      this.shop.Reset(this.player, this.skill);
+    })
   }
 
   static Update() {

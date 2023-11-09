@@ -26,6 +26,10 @@ class Shop {
   }
 
   Reset (player, skill) {
+    if (this.sales < 1) {
+      alert("You haven't bought anything yet!");
+      return
+    }
     player.OvoPoints = this.sales -1;
     skill.level = 0;
     player.TapPower = 1;

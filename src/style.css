@@ -38,6 +38,18 @@ h3 {
   margin: 0 0 20px 0;
 }
 
+button {
+  transition: 80ms;
+}
+
+button:hover {
+  scale: 1.02;
+}
+
+button:active {
+  scale: 1.01;
+}
+
 .display {
   margin: 0 1ch;
   font-weight: bold;
@@ -51,7 +63,7 @@ h3 {
   background: none;
   border: none;
   width: fit-content;
-  margin: 16px;
+  margin: 36px;
 }
 
 .ovoImage {
@@ -100,4 +112,15 @@ h3 {
   color: #ecf5fe;
   font-size: 2vh;
   filter: drop-shadow(0px 0px 3px #084b83);
+}
+
+.resetButton {
+  background-color: #111;
+  color: #ecf5fe;
+  font-size: 3vh;
+  border: none;
+  border-radius: 0.3ch;
+  margin: 20px;
+  padding: 0.5ch;
+  max-width: 90%;
 }

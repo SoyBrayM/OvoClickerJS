@@ -24,7 +24,7 @@ class Ovo {
   }
 
   Hatch() {
-    alert("YOU HAVE HATCHED THE OVO!");
+    document.body.innerHTML = "<h1>You have hatched the Ovo!\nContratulations</h1>";
   }
 }
 

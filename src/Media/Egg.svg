@@ -2,13 +2,19 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
  "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="1280.000000pt" height="1280.000000pt" viewBox="0 0 1280.000000 1280.000000"
+ width="905.000000pt" height="1150.000000pt" viewBox="188 44 906.000000 1190.000000"
  preserveAspectRatio="xMidYMid meet">
 <metadata>
 Created by potrace 1.15, written by Peter Selinger 2001-2017
 </metadata>
+<defs>
+  <radialGradient id="RadialGradient1">
+    <stop offset="0%" stop-color="#FFE"/>
+    <stop offset="100%" stop-color="#FFF" />
+  </radialGradient>
+</defs>
 <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
-fill="#F0F6F6" stroke="none">
+fill="url(#RadialGradient1)" stroke="none">
 <path d="M6240 12334 c-401 -35 -693 -107 -1037 -254 -858 -368 -1668 -1163
 -2270 -2230 -799 -1415 -1172 -3220 -997 -4825 205 -1890 1151 -3398 2580
 -4113 465 -233 919 -363 1474 -424 152 -16 691 -16 835 0 563 65 999 188 1450

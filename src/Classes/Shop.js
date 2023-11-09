@@ -10,6 +10,7 @@ class Shop {
     }
     player.OvoPoints--;
     player.TapPower++;
+    this.sales++;
   }
   
   UpgradeSkill (player, skill) {
@@ -21,6 +22,13 @@ class Shop {
     document.getElementById("SkillButton").style.backgroundColor = "#D81159";
     player.OvoPoints--;
     skill.level++;
+    this.sales++;
+  }
+
+  Reset (player, skill) {
+    player.OvoPoints = this.sales -1;
+    skill.level = 0;
+    player.TapPower = 1;
   }
 }
 

@@ -54,17 +54,32 @@ h2 {
   max-width: 75vw;
   max-height: 40vh;
   filter: drop-shadow(5px 5px 10px #084B83);
-  border: black 1px solid;
+  transition: 80ms;
+}
+
+.ovoButton:hover .ovoImage {
+  scale: 1.05;
+}
+
+.ovoButton:active .ovoImage {
+  scale: 1.03;
 }
 
 .skillButton {
-  background-color: #D81159;
+  background-color: #5E0827;
   color: #ECF5FE;
   font-size: 3vh;
   border: none;
   border-radius: .3ch;
   padding: .5ch;
 
+}
+
+.shopButtonsWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Responsive section for screens with height greater than width */

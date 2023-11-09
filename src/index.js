@@ -9,30 +9,44 @@ const OvoPointsDisplay = document.getElementById("OvoPointsDisplay");
 const TapPowerDisplay = document.getElementById("TapPowerDisplay");
 
 const OvoButton = document.getElementById("OvoButton");
+const SkillButton = document.getElementById("SkillButton");
+const ShopTapPower = document.getElementById("ShopTapPower");
+const ShopSkill = document.getElementById("ShopSkill");
 
 class Program {
+  static main() {
+    this.ovo = new Ovo(10000);
+    this.player = new Player();
+    this.skill = new Skill();
+    this.shop = new Shop();
+    setInterval(() => {
+      this.Update();
+    }, 16);
 
-    static main() {
-        this.ovo = new Ovo(10000);
-        this.player = new Player();
-        this.skill = new Skill();
-        this.shop = new Shop();
+    OvoButton.addEventListener("click", () => {
+      this.ovo.Click(this.player);
+    });
+    SkillButton.addEventListener("click", () => {
+      this.skill.Activate(this.player);
+    });
+    ShopTapPower.addEventListener("click", () => {
+      this.shop.UpgradeTapPower(this.player);
+    });
+    ShopSkill.addEventListener("click", () => {
+      this.shop.UpgradeSkill(this.player, this.skill);
+    });
+  }
 
-        OvoButton.addEventListener("click", () => {this.ovo.Click(this.player)})
-     
-        this.Update();
-    }
-
-    static Update() {
-        // Update the DOM
-        TicksToHatchDisplay.innerText = this.ovo.ticksToHatch;
-        TapsToRewardDisplay.innerText = this.ovo.tapsToReward;
-        OvoPointsDisplay.innerText = this.player.OvoPoints;
-        TapPowerDisplay.innerText = this.player.TapPower;
-    }
+  static Update() {
+    // Update the DOM
+    TicksToHatchDisplay.innerText = this.ovo.ticksToHatch;
+    TapsToRewardDisplay.innerText = this.ovo.tapsToReward;
+    OvoPointsDisplay.innerText = this.player.OvoPoints;
+    TapPowerDisplay.innerText = this.player.TapPower;
+  }
 }
 
-Program.main()
+Program.main();
 
 window.Program = Program;
 

@@ -1,71 +1,80 @@
 * {
   font-family: monospace;
+  font-weight: normal;
 }
 
 html {
+  height: 100%;
   background: radial-gradient(#42bfdd, #084b83);
 }
 
-html,
 body {
   height: 100%;
-  width: 100%;
-}
-
-.wrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.horizontal {
-  flex-direction: row;
-}
-
-.vertical {
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 ;
+}
+
+body > *:not(script) {
+  display: flex;
+  padding: 2px 0;
+}
+
+h1 {
+  margin: 20px 0 0 0;
+  font-weight: bold;
+  font-size: 3vh;
+}
+
+h2 {
+  margin: 20px 0 0 0;
+  font-weight: bold;
+  font-size: 2vh;
 }
 
 .display {
-  margin-left: 1ch;
-  margin-right: 1ch;
-}
-
-.OvoButton {
-  background: transparent;
-  max-width: 75vw;
-  max-height: 50vh;
-  width: fit-content;
-  height: fit-content;
-  padding: 1%;
-  margin: 0;
-  border: none;
-  background-image: url(./Media/EggBack.svg);
-  background-size: contain;
-  z-index: -2;
-  transition: all 100ms ease-in-out;
-}
-
-.OvoButton:focus{
-  outline: none;
-}
-
-.OvoButton:hover {
-  transform: scale(1.02);
-}
-  
-.OvoButton:active {
-  transform: scale(1.01);
-}
-
-.OvoImage {
-  max-width: 75vw;
-  max-height: 50vh;
-  width: var(fit-content - 1%);
-  height: fit-content;
-  z-index: -1;
+  margin: 0 1ch;
+  font-weight: bold;
 }
 
 .info {
-  font-size: calc(100/19 * 1vw);
+  font-size: 2vh;
+}
+
+.ovoButton {
+  background: none;
+  border: none;
+  width: fit-content;
+  margin: 16px;
+}
+
+.ovoImage {
+  max-width: 75vw;
+  max-height: 40vh;
+  filter: drop-shadow(5px 5px 10px #084B83);
+  border: black 1px solid;
+}
+
+.skillButton {
+  background-color: #D81159;
+  color: #ECF5FE;
+  font-size: 3vh;
+  border: none;
+  border-radius: .3ch;
+  padding: .5ch;
+
+}
+
+/* Responsive section for screens with height greater than width */
+@media screen and (max-aspect-ratio: 1/1) {
+  h1 {
+    font-weight: bold;
+    font-size: 3vh;
+  }
+  
+  .info {
+    font-size: 2vh;
+  }
 }

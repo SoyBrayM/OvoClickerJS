@@ -8,43 +8,40 @@
   <link rel="stylesheet" href="src/style.css" />
 </head>
 
-<body class="wrapper vertical">
-  <div class="wrapper horizontal info">
-    <b>Ticks left:</b>
+<body class="">
+  <div class="info">
+    <div>Ticks left:</div>
     <div class="display" id="TicksToHatchDisplay">69420</div>
   </div>
-  <div class="wrapper horizontal info ">
-    <b>Tap Power:</b>
+  <div class="info">
+    <div>Tap Power:</div>
     <div class="display" id="TapPowerDisplay">69420</div>
   </div>
-  <div class="wrapper horizontal info">
-    <b>Next OvoPoint in: </b>
+  <div class="info">
+    <div>Next OvoPoint in</div>
     <div class="display" id="TapsToRewardDisplay">69420</div>
-    <b> Taps!</b>
+    <div> Taps!</div>
 
   </div>
+  <button class="ovoButton" id="OvoButton">
+    <img class="ovoImage" src="./src/Media/Egg.svg">
+  </button>
   <div>
-    <button class="OvoButton" id="OvoButton">
-      <img class="OvoImage" src="./src/Media/Egg.svg">
-    </button>
+    <button class="skillButton" id="Skill">Activate Skill</button>
   </div>
-  <div>
-    <button id="Skill">Activate Skill</button>
+  <h1 class="">SHOP</h1>
+  <div class="info">
+    <div>You have</div>
+    <div>
+      <div class="display" id="OvoPointsDisplay">0</div>
+    </div>
+    <div>Ovopoints</div>
   </div>
-  <div>SHOP</div>
-  <div>You have</div>
-  <b>
-    <div class="display" id="OvoPointsDisplay">0</div>
-  </b>
-  <div>Ovopoints</div>
-  <div>What do you want to upgrade?</div>
-  <div>
+  <h2 class="">What do you want to upgrade?</h2>
+  <div class="">
     <button>Tap Power</button>
     <button>Skill</button>
   </div>
-  <div class="wrapper vertical">
-  </div>
 </body>
 <script type="module" src="src/index.js"></script>
-
 </html>
